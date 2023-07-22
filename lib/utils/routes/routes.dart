@@ -1,4 +1,5 @@
 import 'package:design_one/utils/routes/routeNames.dart';
+import 'package:design_one/view/screens/screenFour.dart';
 import 'package:design_one/view/screens/screenThree.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +21,11 @@ class Routes {
       case RouteNames.thirdPage:
         return MaterialPageRoute(
             builder: (BuildContext context) => ScreenThree());
+
+      case RouteNames.fourthPage:
+        return MaterialPageRoute(
+            builder: (BuildContext context) =>
+                ScreenFour(settings.arguments as dynamic));
 
       default:
         return MaterialPageRoute(

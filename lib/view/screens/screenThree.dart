@@ -1,3 +1,4 @@
+import 'package:design_one/utils/routes/routeNames.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/screenThreeWidgets/allList.dart';
@@ -19,7 +20,9 @@ class ScreenThreeState extends State<ScreenThree> {
     // TODO: implement build
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => Navigator.pushNamed(context, RouteNames.fourthPage,
+            //This is how we send data to the defined page(In form Of A Map. Also, we need to define the arugument definition on the route page as well)
+            arguments: {'dataSent': search.text}),
         child: const Icon(Icons.add, color: Colors.white),
       ),
       bottomNavigationBar: Container(
